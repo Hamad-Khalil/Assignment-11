@@ -43,6 +43,8 @@
 
 // rollno : 12 };
 
+// let keysInObj= Object.keys(student)
+// console.log(keysInObj.length);
 
 // 4. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
 
@@ -134,10 +136,11 @@
 
 
 // 9. Write a JavaScript program to calculate the area and perimeter of a circle.
-
+//Mthod 1
 // let radius= 1; // Here's the radius supplied by the user
 // console.log("The area of the cirlce is", radius*3.14 , "and perimeter of the circle is", 2*3.14*radius );
 
+// Method 2
 // let radius= 1
 // function findAreaPeri (radius){
 //     let area= radius*3.14;
@@ -147,14 +150,10 @@
 // }
 // findAreaPeri(radius)
 
-// Note : Create two methods to calculate the area and perimeter. The radius of the circle will be supplied by the user.
-
-
 
 // 10. Write a JavaScript program to sort an array of JavaScript objects.
 
 // Sample Object :
-
 
 
 // var library = [
@@ -237,12 +236,37 @@
 
 //  14. Write a JavaScript function to retrieve all the values of an object's properties.
 
+// let obj={
+//     name: 'Hamad',
+//     age : 20,
+//     country: 'Pakistan',
+// }
+// console.log(Object.values(obj));
+
 //  15. Write a JavaScript function to convert an object into a list of `[key, value]` pairs.
+// let obj= {
+//     name : "Hamad" ,
+//     fName: "Khalil" ,
+//     age: 20 ,
+//     country : "Pakistan", }
+//     for (const[key,value] of Object.entries(obj))
+//     console.log(`${key} ${value}`)
 
 //  16. Write a JavaScript function to get a copy of the object where the keys have become the values and the values the keys.
 
 //  17. Write a JavaScript function to check whether an object contains given property.
 
+// function hasProperty(obj, propName) {
+//     return obj.hasOwnProperty(propName);
+//   }
+// let obj={
+//         title: 'Mockingjay: The Final Book of The Hunger Games',
+    
+//             author: 'Suzanne Collins',
+    
+//          libraryID: 3245
+// };
+// console.log(hasProperty(obj, "title")); // output:  True
 
 
 
@@ -251,20 +275,24 @@
 
 
 
-let obj= {
-    name : "Hamad" ,
-    fName: "Khalil" ,
-    age: 20 ,
-    country : "Pakistan", 
-    Hobbies: ['Cricket', 'Book Reading', 'Socializing'],
-    fulName: function (){
-        return this.name + " " + this.fName
-    }
-}
-let otherObj= {
-    name: 'HAMAD',
-    fName: 'KHALIL'
-}
+
+// let obj= {
+//     name : "Hamad" ,
+//     fName: "Khalil" ,
+//     age: 20 ,
+//     country : "Pakistan", 
+//     Hobbies: ['Cricket', 'Book Reading', 'Socializing'],
+//     fulName: function (){
+//         return this.name + " " + this.fName
+//     }
+// }
+// let otherObj= {
+//     name: 'HAMAD',
+//     fName: 'KHALIL'
+// }
+// for (const [key, value] of Object.entries(obj))
+//     console.log(`${key} ${value}`);
+// console.log(Object.entries(obj));
 // console.log(Object.assign(obj, otherObj)); //to merge to object
 // console.log(obj.age); // to get a specific property from the object
 // console.log(obj.Hobbies); // to get arrays in a object
